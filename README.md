@@ -15,4 +15,5 @@ Install the .msix and the certificate to install the application.
 
 The Application requires all of the attribute fields to be filled. It will overwrite any file with the same name inside of the output folder, so for multiple codes be sure to rename the file and use a .png extension. 
 When you are ready to export, you can hit view to open your default image viewer or use the open → output folder button.
+
 ![main page](https://github.com/landonis/qr-generator/blob/MD-Asset/0.0.1.screenshots/output.png)
