@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="qr_generator.Views.NewQRCodePage"
+             Title="QR Generator">
+    <ContentPage.MenuBarItems >
+        <MenuBarItem Text="Open">
+            <MenuFlyoutItem Text="Output Folder"
+                            Clicked="OpenOutput_Clicked" />
+        </MenuBarItem>
+                     
+                     
+
+    </ContentPage.MenuBarItems>
+        
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="File Name" Margin="5"  HorizontalOptions="Center"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="filename" 
+                Grid.Column="1"
+                Placeholder="{Binding File_Name}"
+                Text="{Binding File_Name}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+        <Label Text="Data" Margin="5"  HorizontalOptions="Center"
+               Grid.Row="1"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="data"
+                Grid.Column="1" Grid.Row="1"
+                Placeholder="{Binding Data}"
+                Text="{Binding Data}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+        <Label Text="Box Size" Margin="5"  HorizontalOptions="Center"
+               Grid.Row="2"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="boxsizeEntry"
+                Grid.Column="1" Grid.Row="2"
+                Placeholder="{Binding Box_Size}"
+                Text="{Binding Box_Size}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+        <Label Text="Border Width" Margin="5"  HorizontalOptions="Center"
+               Grid.Row="3"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="borderEntry"
+                Grid.Column="1" Grid.Row="3"
+                Placeholder="{Binding Border}"
+                Text="{Binding Border}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+        <Label Text="Fill Color" Margin="5"  HorizontalOptions="Center"
+               Grid.Row="4"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="fillEntry"
+                Grid.Column="1" Grid.Row="4"
+                Placeholder="{Binding Fill_Color}"
+                Text="{Binding Fill_Color}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+        <Label Text="Background Color" Margin="5"  HorizontalOptions="Center"
+               Grid.Row="5"
+                   FontSize="28" />
+        <Entry Margin="5" x:Name="bgEntry"
+                Grid.Column="1" Grid.Row="5"
+                Placeholder="{Binding Back_Color}"
+                Text="{Binding Back_Color}"
+                HeightRequest="50"
+               
+                FontSize="26" />
+
+
+        <Button Text="Run" Grid.Row="6"
+                Grid.ColumnSpan="2"
+                    Clicked="run_Clicked" />
+
+        <Button Text="View"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                    Clicked="ViewCode_Clicked" />
+
+        <Label Text="Preview"
+               Grid.Row="8"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center"
+               
+                FontSize="28" />
+
+        <Image x:Name="ImagePreview"
+               Grid.Row="9"
+                Grid.ColumnSpan="2"
+                Source="{Binding Image_Path}"
+                   Margin="10"/>
+    </Grid>
+</ContentPage>

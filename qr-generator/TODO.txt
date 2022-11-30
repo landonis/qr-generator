@@ -1,0 +1,9 @@
+﻿TODO
+
+Error Handling
+	-try and catch statements
+	-input validation
+		-path filetype
+		-numbers
+		-colors
+fix UI Scaling
